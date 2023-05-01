@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <title>Player</title>
+  </head>
+  <body>
+    <div class="container paused" data-volume-level="high">
+      <div class="upper-container"></div>
+      <div class="video-controls-container">
+        <div class="quality-container">
+          <button class="quality-class">1080p</button>
+          <button class="quality-class">720p</button>
+          <button class="quality-class">480p</button>
+          <button class="quality-class">360p</button>
+          <button class="quality-class">240p</button>
+          <button class="quality-class">144p</button>
+        </div>
+        <div class="playback-container">
+          <input type="radio" name="playback-speed" id="0.25" value="0.25" />
+          <label for="0.25">0.25</label>
+          <input type="radio" name="playback-speed" id="0.50" value="0.50" />
+          <label for="0.50">0.50</label>
+          <input type="radio" name="playback-speed" value="0.75" id="0.75" />
+          <label for="0.75">0.75</label>
+          <input type="radio" name="playback-speed" id="Normal" value="1" />
+          <label for="Normal">Normal</label>
+          <input type="radio" name="playback-speed" id="1.25" value="1.25" />
+          <label for="1.25">1.25</label>
+          <input type="radio" name="playback-speed" id="1.50" value="1.50" />
+          <label for="1.50">1.50</label>
+          <input type="radio" name="playback-speed" id="1.75" value="1.75" />
+          <label for="1.75">1.75</label>
+          <input type="radio" name="playback-speed" id="2" value="2" />
+          <label for="2">2</label>
+        </div>
+        <div class="timeline-container">
+          <div class="timeline">
+            <img class="preview-img" />
+            <div class="thumb-indicator"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="play-btn">
+            <svg
+              class="play-icon"
+              height="48px"
+              fill="#FFFFFF"
+              viewBox="0 0 36 36"
+              width="48px"
+            >
+              <path
+                d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"
+              ></path>
+            </svg>
+            <svg
+              class="pause-icon"
+              height="48px"
+              fill="#FFFFFF"
+              viewBox="0 0 36 36"
+              width="48px"
+            >
+              <path
+                d="M 12,26 16,26 16,10 12,10 z M 21,26 25,26 25,10 21,10 z"
+              ></path>
+            </svg>
+          </button>
+          <div class="volume-container">
+            <button class="volume-btn">
+              <svg
+                class="volume-high-icon"
+                height="48px"
+                viewBox="0 0 36 36"
+                width="48px"
+              >
+                <path
+                  d="M8,21 L12,21 L17,26 L17,10 L12,15 L8,15 L8,21 Z M19,14 L19,22 C20.48,21.32 21.5,19.77 21.5,18 C21.5,16.26 20.48,14.74 19,14 ZM19,11.29 C21.89,12.15 24,14.83 24,18 C24,21.17 21.89,23.85 19,24.71 L19,26.77 C23.01,25.86 26,22.28 26,18 C26,13.72 23.01,10.14 19,9.23 L19,11.29 Z"
+                  fill="#fff"
+                ></path>
+              </svg>
+              <svg
+                class="volume-low-icon"
+                height="48px"
+                viewBox="0 0 36 36"
+                width="48px"
+              >
+                <path
+                  d="M8,21 L12,21 L17,26 L17,10 L12,15 L8,15 L8,21 Z M19,14 L19,22 C20.48,21.32 21.5,19.77 21.5,18 C21.5,16.26 20.48,14.74 19,14 Z"
+                  fill="#fff"
+                ></path>
+              </svg>
+              <svg
+                class="volume-mute-icon"
+                height="48px"
+                viewBox="0 0 36 36"
+                width="48px"
+              >
+                <path
+                  fill="#FFFFFF"
+                  d="m 21.48,17.98 c 0,-1.77 -1.02,-3.29 -2.5,-4.03 v 2.21 l 2.45,2.45 c .03,-0.2 .05,-0.41 .05,-0.63 z m 2.5,0 c 0,.94 -0.2,1.82 -0.54,2.64 l 1.51,1.51 c .66,-1.24 1.03,-2.65 1.03,-4.15 0,-4.28 -2.99,-7.86 -7,-8.76 v 2.05 c 2.89,.86 5,3.54 5,6.71 z M 9.25,8.98 l -1.27,1.26 4.72,4.73 H 7.98 v 6 H 11.98 l 5,5 v -6.73 l 4.25,4.25 c -0.67,.52 -1.42,.93 -2.25,1.18 v 2.06 c 1.38,-0.31 2.63,-0.95 3.69,-1.81 l 2.04,2.05 1.27,-1.27 -9,-9 -7.72,-7.72 z m 7.72,.99 -2.09,2.08 2.09,2.09 V 9.98 z"
+                ></path>
+              </svg>
+            </button>
+            <input
+              class="volume-slider"
+              type="range"
+              min="0"
+              max="1"
+              step="any"
+              value="1"
+            />
+          </div>
+          <div class="duration-container">
+            <div class="current-time">0:00</div>
+            /
+            <div class="total-time"></div>
+          </div>
+          <button class="quality-window">
+            <svg height="48px" viewBox="0 0 36 36" width="48px" fill="#FFFFFF">
+              <path
+                d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7.5 13h2v2H11V9H9.5v2.5h-2V9H6v6h1.5zM18 14v-4c0-.55-.45-1-1-1h-4v6h4c.55 0 1-.45 1-1zm-1.5-.5h-2v-3h2v3z"
+              />
+            </svg>
+          </button>
+          <button class="playback-window">
+            <img
+              src="./assets/slow_motion_video_white_36dp.svg"
+              alt="playback"
+            />
+          </button>
+          <button class="caption-btn">
+            <svg
+              class="caption-icon"
+              height="48px"
+              viewBox="0 0 36 36"
+              width="48px"
+              fill-opacity="1"
+            >
+              <path
+                d="M11,11 C9.89,11 9,11.9 9,13 L9,23 C9,24.1 9.89,25 11,25 L25,25 C26.1,25 27,24.1 27,23 L27,13 C27,11.9 26.1,11 25,11 L11,11 Z M17,17 L15.5,17 L15.5,16.5 L13.5,16.5 L13.5,19.5 L15.5,19.5 L15.5,19 L17,19 L17,20 C17,20.55 16.55,21 16,21 L13,21 C12.45,21 12,20.55 12,20 L12,16 C12,15.45 12.45,15 13,15 L16,15 C16.55,15 17,15.45 17,16 L17,17 L17,17 Z M24,17 L22.5,17 L22.5,16.5 L20.5,16.5 L20.5,19.5 L22.5,19.5 L22.5,19 L24,19 L24,20 C24,20.55 23.55,21 23,21 L20,21 C19.45,21 19,20.55 19,20 L19,16 C19,15.45 19.45,15 20,15 L23,15 C23.55,15 24,15.45 24,16 L24,17 L24,17 Z"
+                fill="#fff"
+              ></path>
+            </svg>
+          </button>
+          <button class="fullscreen-btn">
+            <svg
+              class="open"
+              height="48px"
+              viewBox="0 0 36 36"
+              width="48px"
+              fill="#FFFFFF"
+            >
+              <path d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z"></path>
+              <path d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z"></path>
+              <path d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z"></path>
+              <path d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z"></path>
+            </svg>
+            <svg
+              class="close"
+              height="48px"
+              fill="#FFFFFF"
+              viewBox="0 0 36 36"
+              width="48px"
+            >
+              <path d="m 14,14 -4,0 0,2 6,0 0,-6 -2,0 0,4 0,0 z"></path>
+              <path d="m 22,14 0,-4 -2,0 0,6 6,0 0,-2 -4,0 0,0 z"></path>
+              <path d="m 20,26 2,0 0,-4 4,0 0,-2 -6,0 0,6 0,0 z"></path>
+              <path d="m 10,22 4,0 0,4 2,0 0,-6 -6,0 0,2 0,0 z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <video src="/video"></video>
+      <!-- <track kind="captions" srclang="en" src="assets/subtitles.srt" /> -->
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

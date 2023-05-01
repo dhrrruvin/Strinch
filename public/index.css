@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111111;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-height: 100%;
+}
+
+.video-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 300px; */
+  /* width: 100%; */
+  background-color: #222222;
+  /* overflow means it wont overflow and won't provide scroll */
+  overflow: hidden;
+}
+
+@media screen and (min-width: 640px) {
+  .video-wrapper {
+    width: 100%;
+    /* height: 400px; */
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .video-wrapper {
+    width: 600px;
+    /* height: 420px; */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .video-wrapper {
+    width: 780px;
+    /* height: 440px; */
+  }
+}
+
+.video-wrapper:hover > .bottom-ctrl > .actions {
+  /* display: block; */
+  opacity: 1;
+  -webkit-transition: opacity .25s cubic-bezier(0, 0, .2, 1);
+  -moz-transition: opacity .25s cubic-bezier(0, 0, .2, 1);
+}
+
+.upper-ctrl {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  outline: 0;
+}
+
+
+.bottom-ctrl {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  height: 54px;
+}
+
+.progress-bar-container {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.actions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* display: none; */
+  opacity: 0;
+  transition: opacity .11s cubic-bezier(0, 0, .2, 1);
+  -webkit-transition: opacity .11s cubic-bezier(0, 0, .2, 1);
+  -moz-transition: opacity .11s cubic-bezier(0, 0, .2, 1);
+}
+
+/* .progress-bar {
+  height: 2px;
+  background-color: grey;
+  margin-left: 10px;
+  margin-right: 10px;
+  bottom: 0;
+} */
+
+.progress-bar {
+  width: 100%;
+}
+
+.seek-bar {
+  appearance: none;
+  height: 2px;
+  background-color: grey;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 97%;
+  bottom: 0;
+}
+
+.action-left {
+  float: left;
+}
+
+.action-right {
+  float: right;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  height: 48px;
+  bottom: 0;
+  outline: 0;
+}
+
+.play-btn-div, .next-btn-div, .mute-btn-div {
+  position: relative;
+  display: inline-block;
+}
+
+.mute-btn-div:hover ~ .audio-range-div {
+  margin-left: 10px;
+  width: 64px;
+  display: inline-block;
+  transition: 10s;
+  /* transition: margin-left 15s cubic-bezier(.4, 0, .1, .1), width 15s cubic-bezier(.4, 0, .1, .1); */
+}
+
+.audio-range-div {
+  position: absolute;
+  /* display: inline-block; */
+  display: none;
+  margin-top: 13px;
+  margin-left: 0;
+  outline: 0;
+  width: 0px;
+  transition: margin-left 15s cubic-bezier(.4, 0, .1, .1), width 15s cubic-bezier(.4, 0, .1, .1);
+}
+
+.audio-range {
+  appearance: none;
+  height: 2px;
+  cursor: pointer;
+  width: 100%;
+  background-color: grey;
+}

@@ -1,0 +1,50 @@
+.action-left {
+    float: left;
+}
+
+.action-right {
+    float: right;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    height: 48px;
+    bottom: 0;
+    outline: 0;
+}
+
+.play-btn-div, .next-btn-div, .mute-btn-div {
+    position: relative;
+    display: inline-block;
+}
+
+.mute-btn-div:hover ~ .audio-range-div {
+    margin-left: 10px;
+    width: 64px;
+    display: inline-block;
+    transition: 10s;
+    /* transition: margin-left 15s cubic-bezier(.4, 0, .1, .1), width 15s cubic-bezier(.4, 0, .1, .1); */
+}
+
+.audio-range-div {
+    position: absolute;
+    /* display: inline-block; */
+    display: none;
+    margin-top: 13px;
+    margin-left: 0;
+    outline: 0;
+    width: 0px;
+    transition: margin-left 15s cubic-bezier(.4, 0, .1, .1), width 15s cubic-bezier(.4, 0, .1, .1);
+}
+
+.audio-range {
+    appearance: none;
+    height: 2px;
+    cursor: pointer;
+    width: 100%;
+    background-color: grey;
+}

@@ -1,0 +1,17 @@
+input {
+    outline: none;
+}
+
+.progress-bar {
+    width: 100%;
+}
+
+.seek-bar {
+    appearance: none;
+    height: 2px;
+    background-color: grey;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 97%;
+    bottom: 0;
+}
